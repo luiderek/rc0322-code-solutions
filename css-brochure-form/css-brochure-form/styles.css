@@ -1,0 +1,57 @@
+.container {
+  width: 70vw;
+  max-width: 550px;
+  margin: auto;
+}
+
+h4 {
+  margin: 0;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: rgb(255 88 70);
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05rem;
+  text-align: center;
+}
+
+label {
+  font-family: "Brandon Grotesque", sans-serif;
+  font-weight: 500;
+  font-size: 0.6rem;
+  padding-left: 0.55rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.1rem;
+  margin-bottom: 0.6rem;
+  padding: 0.6rem 0.5rem 0.4rem;
+  border-width: 0.5px;
+  border-radius: 7px;
+}
+
+select {
+  width: 100%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  padding: 0.6rem 0.3rem;
+  background-color: rgb(241 241 241);
+  border-radius: 5px;
+  font-size: 0.65rem;
+}
+
+button {
+  font-family: "Brandon Grotesque", sans-serif;
+  background-color: rgb(233 92 76);
+  color: white;
+  font-size: 0.7rem;
+  margin-top: 0.3rem;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border-style: none;
+}
+
+.rightjust {
+  float: right;
+}
