@@ -1,0 +1,23 @@
+button {
+  padding: 0.5rem 1rem;
+  font-size: large;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transition-duration: 0.08s;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+tbody > tr {
+  background-color: rgb(215 215 215);
+}
+
+tbody > tr:nth-child(2n) {
+  background-color: rgb(245 245 245);
+}
