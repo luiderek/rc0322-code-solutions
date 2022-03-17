@@ -1,0 +1,73 @@
+* {
+  font-family: Karla, sans-serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 2rem 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: auto;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+p {
+  line-height: 1.6rem;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+
+.subtitle {
+  margin: 2rem auto 3rem;
+  max-width: 710px;
+}
+
+.col100 {
+  width: 100%;
+}
+
+.col50 {
+  width: 50%;
+  margin: auto 2rem;
+}
+
+.col25 {
+  width: 25%;
+}
+
+.col75 {
+  padding-left: 0.6rem;
+  width: 75%;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  margin-top: 2.5rem;
+  background-color: white;
+  color: rgb(255 81 61);
+  font-weight: 700;
+  border-color: rgb(255 81 61);
+  padding: 0.4rem 2.3rem;
+}
+
+.justifycenter {
+  justify-content: center;
+}
