@@ -26,3 +26,7 @@ img {
 .col-66 {
   width: calc(200% / 3);
 }
+
+.col-100 {
+  width: 100%;
+}
