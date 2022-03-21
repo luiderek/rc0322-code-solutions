@@ -17,6 +17,10 @@
   font-size: 100%;
 }
 
+* {
+  font-family: Avenir, normal, sans-serif;
+}
+
 /* HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR */
 
 /* use padding instead of margin to keep border */
