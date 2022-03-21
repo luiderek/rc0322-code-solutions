@@ -25,7 +25,7 @@
 
 /* use padding instead of margin to keep border */
 .headbar {
-  border-bottom: 1px solid rgb(233 235 238);
+  border-bottom: 2px solid rgb(233 235 238);
   margin: 0;
   padding: 0 5vw;
 }
@@ -144,6 +144,11 @@
   color: rgb(110 110 110);
 }
 
+.centertext p {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
 .otherlist li {
   color: rgb(110 110 110);
   text-align: center;
@@ -162,17 +167,30 @@
 /* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
 
 .ctatext {
-  margin: auto 3rem;
+  margin: auto 5vw;
   color: rgb(110 110 110);
+}
+
+.ctatext p {
+  padding-bottom: 3vh;
 }
 
 .ctatext h2 {
   font-family: "Tiempos Headline", Times, serif;
   color: rgb(110 110 110);
+  font-size: 140%;
+  letter-spacing: 0.06rem;
+}
+
+.ctabutt {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .ctabutt button {
-  margin: 3rem;
+  margin: 5vh 6vw 0 0;
+  padding: 0.75rem 1.6rem;
+  height: fit-content;
 }
 
 /* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
@@ -180,7 +198,7 @@
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
 
 .footer {
-  padding: auto 3rem;
+  padding: 2.5vh 0 0;
 }
 
 .darkbg {
@@ -192,22 +210,42 @@
   padding-left: 5vw;
 }
 
+.leftfootertext {
+  padding-bottom: 14vh;
+}
+
+.leftfootertext > * {
+  color: white;
+  padding-left: 5vw;
+}
+
+.leftfootertext p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
 .footertext a {
   display: block;
   text-decoration: none;
+  margin-top: 1rem;
 }
 
-.footertext img {
+.leftfootertext img {
   height: 1.5rem;
-  margin-top: 3.5rem;
-  margin-bottom: 0;
+  margin-top: 13vh;
+  margin-bottom: 3vh;
+}
+
+.footertext p {
+  padding-top: 10vh;
 }
 
 .footerlink a {
   color: grey;
   text-decoration: none;
-  margin: 2rem 1.5rem 2rem 3rem;
-  padding-bottom: 1rem;
+  margin: 0 -1vw 0 0;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
 }
 
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
