@@ -17,14 +17,6 @@
   font-size: 100%;
 }
 
-.overlay {
-  background: linear-gradient(transparent, rgb(0 0 0 / 75%));
-
-  /* This is from absolute.css from css.positioning. adapt for purposes. */
-  width: 300px;
-  height: 300px;
-}
-
 /* HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR */
 
 /* use padding instead of margin to keep border */
@@ -134,14 +126,17 @@
 .centertext h2 {
   font-family: "Tiempos Headline", Times, serif;
   font-weight: lighter;
+  color: rgb(110 110 110);
 }
 
 .centertext p,
 .centertext h2 {
   text-align: center;
+  color: rgb(110 110 110);
 }
 
 .otherlist li {
+  color: rgb(110 110 110);
   text-align: center;
   margin: 1rem auto;
 }
@@ -157,10 +152,12 @@
 
 .ctatext {
   margin: auto 3rem;
+  color: rgb(110 110 110);
 }
 
 .ctatext h2 {
   font-family: "Tiempos Headline", Times, serif;
+  color: rgb(110 110 110);
 }
 
 .ctabutt button {
@@ -181,8 +178,7 @@
 
 .footertext > * {
   color: white;
-  padding-left: 3rem;
-  margin-left: 0;
+  padding-left: 5vw;
 }
 
 .footertext a {
@@ -192,14 +188,15 @@
 
 .footertext img {
   height: 1.5rem;
-  margin: 3rem;
-  margin-left: 0;
+  margin-top: 3.5rem;
+  margin-bottom: 0;
 }
 
 .footerlink a {
   color: grey;
   text-decoration: none;
   margin: 2rem 1.5rem 2rem 3rem;
+  padding-bottom: 1rem;
 }
 
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
