@@ -1,0 +1,44 @@
+.headbar {
+  border-bottom: 2px solid rgb(233 235 238);
+  padding: 0 5vw;
+}
+
+.headlogo {
+  height: 1.8rem;
+}
+
+.linkheadbar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.linkheadbar a {
+  margin: auto 1.5vw auto 0;
+  color: rgb(179 179 179);
+  transition-duration: 0.2s;
+  text-decoration: none;
+}
+
+.linkheadbar a:hover {
+  color: black;
+  transition-duration: 0.2s;
+}
+
+.iconheadbar {
+  margin: auto;
+  padding-left: 0.5rem;
+}
+
+.linkheadbar button {
+  background-color: rgb(41 68 100);
+  transition-duration: 0.2s;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0 1rem 0.5vw;
+  border-radius: 0.3rem;
+  border-style: none;
+}
+
+.linkheadbar button:hover {
+  background-color: rgb(68 111 163);
+}
