@@ -14,11 +14,13 @@
 
 .container {
   margin: auto;
+  max-width: 1130px;
   font-size: 100%;
 }
 
 * {
   font-family: Avenir, normal, sans-serif;
+  z-index: 2;
 }
 
 /* HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR */
@@ -76,12 +78,24 @@
 
 /* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
 
+.darken::before {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+}
+
 .heropage {
   background-image: url("./images/hero.jpg");
   background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
+  filter: 20%;
   margin: 3rem 5vw;
   width: auto;
+  position: relative;
 
   /* so it was adopting width 100% from row, which was causing the overhang effect bothering me. */
 }
@@ -89,17 +103,19 @@
 .herotext h1,
 .herotext p {
   color: rgb(255 255 255);
-  padding-left: 1.5rem;
-  padding-top: 2rem;
+  padding-left: 4vw;
+  font-weight: 500;
 }
 
 .herotext h1 {
   font-family: "Tiempos Headline", Times, serif;
   line-height: 2.5rem;
+  padding-top: 2rem;
 }
 
 .herotext p {
   line-height: 1.4rem;
+  padding-top: 0;
 }
 
 .herobutt {
@@ -107,10 +123,12 @@
   transition-duration: 0.2s;
   color: white;
   padding: 0.75rem 1.6rem;
-  margin-left: 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-left: 4vw;
+  margin-bottom: 6vh;
+  margin-top: 1vh;
   border-radius: 0.3rem;
   border-style: none;
+  font-size: large;
 }
 
 .herobutt:hover {
@@ -133,7 +151,7 @@
 }
 
 .centertext h2 {
-  font-family: "Tiempos Headline", Times, serif;
+  font-family: "Tiempos Headline", italic, serif;
   font-weight: lighter;
   color: rgb(110 110 110);
 }
@@ -147,6 +165,7 @@
 .centertext p {
   padding-left: 15%;
   padding-right: 15%;
+  line-height: 1.5;
 }
 
 .otherlist li {
@@ -167,7 +186,7 @@
 /* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
 
 .ctatext {
-  margin: auto 5vw;
+  margin: 3vh 5vw 1vh;
   color: rgb(110 110 110);
 }
 
@@ -220,8 +239,7 @@
 }
 
 .leftfootertext p {
-  font-size: 0.9rem;
-  line-height: 1.4rem;
+  line-height: 1.6rem;
 }
 
 .footertext a {
@@ -232,8 +250,8 @@
 
 .leftfootertext img {
   height: 1.5rem;
-  margin-top: 13vh;
-  margin-bottom: 3vh;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
 }
 
 .footertext p {
@@ -246,6 +264,7 @@
   margin: 0 -1vw 0 0;
   padding-bottom: 5vh;
   padding-left: 5vw;
+  font-weight: 600;
 }
 
 /* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
