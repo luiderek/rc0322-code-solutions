@@ -1,0 +1,44 @@
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col25 {
+  width: 25%;
+}
+
+.col100 {
+  width: 100%;
+}
+
+.col25 img {
+  width: 100%;
+}
+
+.col25 img:nth-child(2) {
+  width: 25%;
+}
+
+* {
+  text-align: center;
+  background-color: rgb(247 248 250);
+  font-family: Barlow, sans-serif;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+
+p {
+  padding-top: 0.4rem;
+  font-size: 0.85rem;
+}
