@@ -1,0 +1,270 @@
+.col20 { width: 20%; }
+.col25 { width: 25%; }
+.col33 { width: calc(100% / 3); }
+.col50 { width: 50%; }
+.col60 { width: 60%; }
+.col66 { width: calc(200% / 3); }
+.col80 { width: 80%; }
+.col100 { width: 100%; }
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.container {
+  margin: auto;
+  max-width: 1130px;
+  font-size: 100%;
+}
+
+* {
+  font-family: Avenir, normal, sans-serif;
+  z-index: 2;
+}
+
+/* HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR */
+
+/* use padding instead of margin to keep border */
+.headbar {
+  border-bottom: 2px solid rgb(233 235 238);
+  margin: 0;
+  padding: 0 5vw;
+}
+
+.headlogo {
+  height: 1.8rem;
+}
+
+.linkheadbar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.linkheadbar a {
+  margin: auto 1.5vw auto 0;
+  color: rgb(179 179 179);
+  transition-duration: 0.2s;
+  text-decoration: none;
+}
+
+/* linter doesnt like the placement here
+.linkheadbar a:hover {
+  color: black;
+  transition-duration: 0.2s;
+}
+*/
+
+.iconheadbar {
+  margin: auto;
+  padding-left: 0.5rem;
+}
+
+.buttcontact {
+  background-color: rgb(41 68 100);
+  transition-duration: 0.2s;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0 1rem 0.5vw;
+  border-radius: 0.3rem;
+  border-style: none;
+}
+
+.buttcontact:hover {
+  background-color: rgb(68 111 163);
+}
+
+/* HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR HEADBAR */
+
+/* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
+
+.darken::before {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.3;
+  position: absolute;
+}
+
+.heropage {
+  background-image: url("./images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: 20%;
+  margin: 3rem 5vw;
+  width: auto;
+  position: relative;
+
+  /* so it was adopting width 100% from row, which was causing the overhang effect bothering me. */
+}
+
+.herotext h1,
+.herotext p {
+  color: rgb(255 255 255);
+  padding-left: 4vw;
+  font-weight: 500;
+}
+
+.herotext h1 {
+  font-family: "Tiempos Headline", Times, serif;
+  line-height: 2.5rem;
+  padding-top: 2rem;
+}
+
+.herotext p {
+  line-height: 1.4rem;
+  padding-top: 0;
+}
+
+.herobutt {
+  background-color: rgb(41 68 100);
+  transition-duration: 0.2s;
+  color: white;
+  padding: 0.75rem 1.6rem;
+  margin-left: 4vw;
+  margin-bottom: 6vh;
+  margin-top: 1vh;
+  border-radius: 0.3rem;
+  border-style: none;
+  font-size: large;
+}
+
+.herobutt:hover {
+  background-color: rgb(68 111 163);
+  transition-duration: 0.2s;
+}
+
+/* HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO HERO */
+
+/* OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS */
+
+.centertext {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.otherbg {
+  padding-top: 2.5vh;
+  background-color: rgb(248 248 248);
+}
+
+.centertext h2 {
+  font-family: "Tiempos Headline", italic, serif;
+  font-weight: lighter;
+  color: rgb(110 110 110);
+}
+
+.centertext p,
+.centertext h2 {
+  text-align: center;
+  color: rgb(110 110 110);
+}
+
+.centertext p {
+  padding-left: 15%;
+  padding-right: 15%;
+  line-height: 1.5;
+}
+
+.otherlist li {
+  color: rgb(110 110 110);
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.otherlist {
+  list-style-type: none;
+  line-height: 1.4rem;
+  padding-top: 2vh;
+  padding-bottom: 3vh;
+}
+
+/* OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS OTHERS */
+
+/* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
+
+.ctatext {
+  margin: 3vh 5vw 1vh;
+  color: rgb(110 110 110);
+}
+
+.ctatext p {
+  padding-bottom: 3vh;
+}
+
+.ctatext h2 {
+  font-family: "Tiempos Headline", Times, serif;
+  color: rgb(110 110 110);
+  font-size: 140%;
+  letter-spacing: 0.06rem;
+}
+
+.ctabutt {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.ctabutt button {
+  margin: 5vh 6vw 0 0;
+  padding: 0.75rem 1.6rem;
+  height: fit-content;
+}
+
+/* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
+
+.footer {
+  padding: 2.5vh 0 0;
+}
+
+.darkbg {
+  background-color: rgb(94 94 94);
+}
+
+.footertext > * {
+  color: white;
+  padding-left: 5vw;
+}
+
+.leftfootertext {
+  padding-bottom: 14vh;
+}
+
+.leftfootertext > * {
+  color: white;
+  padding-left: 5vw;
+}
+
+.leftfootertext p {
+  line-height: 1.6rem;
+}
+
+.footertext a {
+  display: block;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.leftfootertext img {
+  height: 1.5rem;
+  margin-top: 10vh;
+  margin-bottom: 2vh;
+}
+
+.footertext p {
+  padding-top: 10vh;
+}
+
+.footerlink a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 -1vw 0 0;
+  padding-bottom: 5vh;
+  padding-left: 5vw;
+  font-weight: 600;
+}
+
+/* FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER FOOTER */
