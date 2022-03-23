@@ -76,14 +76,6 @@
 
 /* FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT */
 
-.footer a {
-  color: grey;
-  text-decoration: none;
-  margin: 0 -1vw 0 0;
-  padding-left: 5vw;
-  font-weight: 600;
-}
-
 .footer-info {
   background-color: #50514f;
   padding: 5rem 0;
@@ -111,6 +103,8 @@
   margin-top: 1rem;
   margin-bottom: 1.5rem;
 }
+
+/* privacy contact privacy contact privacy contact privacy contact */
 
 .footer-privacy-contact {
   padding: 2.5rem 0;
