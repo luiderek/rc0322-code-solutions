@@ -24,7 +24,22 @@ h3 {
   text-align: center;
 }
 
+h5 {
+  font-size: 0.65rem;
+  margin: 1rem 0 -0.4rem;
+}
+
 .row img {
-  width: 95%;
-  margin: auto;
+  width: auto;
+  height: 13rem;
+  object-fit: contain;
+}
+
+.grey {
+  color: rgb(185 185 185);
+  font-size: 0.6rem;
+}
+
+.hilite {
+  background-color: #fdf2e8;
 }
