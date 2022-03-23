@@ -1,0 +1,137 @@
+/* HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD HEAD */
+
+.headbar {
+  border-bottom: 2px solid rgb(233 235 238);
+  margin: 0;
+  padding: 0 5vw;
+}
+
+.headbar-icon {
+  margin: auto;
+  padding-left: 0.5rem;
+}
+
+.headbar-icon img {
+  height: 1.8rem;
+}
+
+.headbar-links {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.headbar-links a {
+  margin: auto 1.5vw auto 0;
+  color: rgb(179 179 179);
+  transition-duration: 0.2s;
+  text-decoration: none;
+}
+
+.headbar-links button {
+  background-color: #0a4265;
+  transition-duration: 0.2s;
+  color: white;
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0 1rem 0.5vw;
+  border-radius: 0.3rem;
+  border-style: none;
+}
+
+/* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
+
+.footer-cta {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-cta h2 {
+  font-family: "Tiempos Headline", Times, serif;
+  font-size: 140%;
+  letter-spacing: 0.06rem;
+  color: rgb(110 110 110);
+  margin: 1.5rem 5vw;
+}
+
+.footer-cta p {
+  color: rgb(110 110 110);
+  margin: 0 5vw;
+}
+
+.footer-cta button {
+  padding: 0.75rem 1.6rem;
+  height: fit-content;
+  background-color: #0a4265;
+  transition-duration: 0.2s;
+  color: white;
+  border-radius: 0.3rem;
+  border-style: none;
+}
+
+.reverse-flex-margin {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5vw;
+  margin-top: 2rem;
+}
+
+/* FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT FOOT */
+
+.footer a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 -1vw 0 0;
+  padding-left: 5vw;
+  font-weight: 600;
+}
+
+.footer-info {
+  background-color: #50514f;
+  padding: 5rem 0;
+}
+
+.footer-info a,
+.footer-info p {
+  color: white;
+}
+
+.footer-info a {
+  display: block;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.footer-info-left > * {
+  color: white;
+  padding-left: 5vw;
+  line-height: 1.6rem;
+}
+
+.footer-info-left img {
+  height: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-privacy-contact {
+  padding: 2.5rem 0;
+  background-color: #fbfbfb;
+}
+
+.footer-privacy-contact a {
+  color: grey;
+  text-decoration: none;
+  margin: 0 -1vw 0 0;
+  padding-left: 5vw;
+  font-weight: 600;
+}
+
+/* pseudoclass containment block to make linter happy */
+
+.headbar-links a:hover {
+  color: black;
+  transition-duration: 0.2s;
+}
+
+.headbar-links button:hover {
+  background-color: rgb(68 111 163);
+}
