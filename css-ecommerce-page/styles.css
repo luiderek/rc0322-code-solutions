@@ -1,0 +1,30 @@
+* {
+  font-family: "DM Sans", normal, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.col20 {
+  width: 20%;
+}
+
+.col100 {
+  width: 100%;
+}
+
+h3 {
+  text-align: center;
+}
+
+.row img {
+  width: 95%;
+  margin: auto;
+}
