@@ -3,3 +3,75 @@
   font-size: 100%;
   z-index: 2;
 }
+
+.darken::before {
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  content: "";
+  opacity: 0.11;
+  position: absolute;
+  margin-top: -6rem;
+}
+
+.hero-section {
+  background-image: url("./images/product/product-header.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: 20%;
+  margin: 3rem 5vw;
+  padding: 6rem 0;
+  width: auto;
+  position: relative;
+
+  /* so it was adopting width 100% from row, which was causing the overhang effect bothering me. */
+}
+
+.hero-section h2,
+.hero-section p {
+  color: rgb(255 255 255);
+  padding-left: 4vw;
+  padding-right: 1rem;
+  font-weight: 500;
+}
+
+.hero-section h2 {
+  font-family: "Tiempos Headline", Times, serif;
+  line-height: 2.5rem;
+  font-size: 200%;
+}
+
+.hero-section p {
+  line-height: 1.4rem;
+}
+
+/* TEXT SECTIONS */
+
+.text-section img {
+  width: 100%;
+}
+
+.light-bg {
+  background-color: #fbfbfb;
+}
+
+.justify-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.text-section h2 {
+  font-family: "Tiempos Headline", Times, serif;
+  font-size: 200%;
+}
+
+.text-section h2,
+.text-section p,
+.text-section a,
+.text-section em {
+  margin: 1rem 4rem;
+}

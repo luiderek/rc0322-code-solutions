@@ -40,8 +40,9 @@
 /* CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA CTA */
 
 .footer-cta {
-  margin-top: 1rem;
+  padding-top: 1rem;
   margin-bottom: 2rem;
+  border-top: #e9ecef 2px;
 }
 
 .footer-cta h2 {
