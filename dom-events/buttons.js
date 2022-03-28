@@ -8,8 +8,6 @@ function handleClick(event) {
 var $clickButton = document.querySelector('.click-button');
 $clickButton.addEventListener('click', handleClick);
 
-console.log($clickButton);
-
 function handleMouseover(event) {
   console.log('button hovered');
   console.log('event:', event);
