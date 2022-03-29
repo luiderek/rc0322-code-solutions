@@ -1,0 +1,27 @@
+.lightbulb {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 30vh auto;
+  background-color: rgb(112 112 112);
+}
+
+body.switch-on {
+  background-color: rgb(240 215 183);
+  transition-duration: 0.5s;
+}
+
+body.switch-off {
+  background-color: rgb(20 20 20);
+  transition-duration: 0.35s;
+}
+
+.lightbulb.switch-on {
+  background-color: rgb(255 246 163);
+  transition-duration: 0.2s;
+}
+
+.lightbulb.switch-off {
+  background-color: rgb(41 41 41);
+  transition-duration: 0.1s;
+}
