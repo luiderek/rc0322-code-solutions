@@ -71,13 +71,11 @@ function drawN(deck, n) {
   return draw;
 }
 
-let deck = newDeck();
-deck = shuffle(deck);
-
 const p1 = new Player('player one');
 const p2 = new Player('player two');
 const p3 = new Player('player three');
 const p4 = new Player('player four');
+
 var playerlist = [p1, p2, p3, p4];
 
 function game(players, cardsperhand) {
@@ -86,10 +84,12 @@ function game(players, cardsperhand) {
     player.hand = drawN(gamedeck, cardsperhand);
     player.score = score(player);
   }
+
   players.sort((a, b) => (a.score < b.score) ? 1 : -1);
+
   for (const player of players) {
-    console.log(player + '.score:', player.score);
-    console.log(player + '.hand:', player.hand);
+    console.log(player.name + '.score:', player.score);
+    console.log(player.name + '.hand:', player.hand);
   }
   return players;
 }
