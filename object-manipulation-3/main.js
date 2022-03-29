@@ -79,7 +79,8 @@ const p4 = new Player('player four');
 var playerlist = [p1, p2, p3, p4];
 
 function game(players, cardsperhand) {
-  const gamedeck = newDeck();
+  const gamedeck = shuffle(newDeck());
+
   for (const player of players) {
     player.hand = drawN(gamedeck, cardsperhand);
     player.score = score(player);
