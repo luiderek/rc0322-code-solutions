@@ -1,5 +1,3 @@
-// console.log('Lodash is loaded:', typeof _ !== 'undefined');
-
 function Player(name, hand) {
   this.name = name;
   this.hand = hand;
@@ -65,10 +63,6 @@ function score(player) {
   return sum;
 }
 
-function drawTwo(deck) {
-  return [deck.shift(), deck.shift()];
-}
-
 function drawN(deck, n) {
   const draw = [];
   for (let i = 0; i < n; i++) {
@@ -80,20 +74,22 @@ function drawN(deck, n) {
 let deck = newDeck();
 deck = shuffle(deck);
 
-console.log('deck (preshuffle):', newDeck());
-
-console.log('deck (postshuffle):', deck);
-
 const p1 = new Player('player one');
 const p2 = new Player('player two');
 const p3 = new Player('player three');
 const p4 = new Player('player four');
-var players = [p1, p2, p3, p4];
-
-// okay cards will be numerically indexed because that is easier
-// 1 2 3 4 5 6 7 8 9 10 11 12 13 1 2 3 4 5 6 7 8 9 10 11 12 13
-// c d h s
+var playerlist = [p1, p2, p3, p4];
 
 function game(players, cardsperhand) {
-
+  const gamedeck = newDeck();
+  for (const player of players) {
+    player.hand = drawN(gamedeck, cardsperhand);
+    player.score = score(player);
+  }
+  players.sort((a, b) => (a.score < b.score) ? 1 : -1);
+  for (const player of players) {
+    console.log(player + '.score:', player.score);
+    console.log(player + '.hand:', player.hand);
+  }
+  return players;
 }
