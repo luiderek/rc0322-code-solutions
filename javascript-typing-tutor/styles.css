@@ -1,0 +1,48 @@
+* {
+  font-family: monospace;
+  font-size: 30px;
+  border-bottom: 4px solid transparent;
+}
+
+word {
+  display: inline-block;
+  height: max-content;
+}
+
+letter {
+  display: inline-block;
+  width: 0.6rem;
+  height: 1rem;
+  margin-top: 0.3rem;
+  vertical-align: bottom;
+}
+
+.typecontent {
+  text-align: center;
+  background-color: rgb(248 204 123);
+  width: 65%;
+  margin: 5vh auto 0;
+}
+
+.correctpercent {
+  width: 15%;
+  margin: 10vh auto;
+  text-align: center;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  /* text-decoration: line-through; - better saved only if it's both wrong and superfluous */
+  color: red;
+}
+
+.wrongbg {
+  background-color: tomato;
+}
+
+.active {
+  border-bottom: 4px solid black;
+}
