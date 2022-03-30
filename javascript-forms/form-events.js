@@ -1,12 +1,20 @@
-const $form = document.querySelector('form');
+function handleFocus(event) {
+  console.log('focus event:', event.target.name);
+}
 
-$form.addEventListener('submit', function (event) {
-  event.preventDefault();
-  const formdata = {
-    name: $form.elements.name.value,
-    email: $form.elements.email.value,
-    message: $form.elements.message.value
-  };
-  console.log(formdata);
-  $form.reset();
-});
+function handleBlur(event) {
+  console.log('blur event:', event.target.name);
+}
+
+function handleInput(event) {
+  console.log('input event for', event.target.name);
+  console.log(event.target.value);
+}
+
+const $forms = document.querySelectorAll('input,textarea');
+
+for (const form of $forms) {
+  form.addEventListener('focus', handleFocus);
+  form.addEventListener('blur', handleBlur);
+  form.addEventListener('input', handleInput);
+}
