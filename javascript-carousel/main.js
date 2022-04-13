@@ -2,10 +2,6 @@ const $leftButton = document.querySelector('.left-button');
 const $rightButton = document.querySelector('.right-button');
 const $circleSelector = document.querySelector('.circle-selector');
 const $circleNodeList = document.querySelectorAll('.fa-circle');
-// const $circle1 = document.querySelector('.circle-1');
-// const $circle2 = document.querySelector('.circle-2');
-// const $circle3 = document.querySelector('.circle-3');
-// const $circle4 = document.querySelector('.circle-4');
 
 $leftButton.addEventListener('click', leftClicked);
 $rightButton.addEventListener('click', rightClicked);
