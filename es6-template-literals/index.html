@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Javascript ES6 - Template Literals</title>
 </head>
+
 <body>
   <script>
     const number = 9200;
@@ -18,7 +20,7 @@
     const lastName = 'Ashraf';
     const age = 25;
 
-    const bio = 'My name is ' + firstName + ' ' + lastName + ' and I am ' + age + ' years old.';
+    const bio = `My name is ${firstName} ${lastName} and I am ${age} years old.`;
 
     console.log('Bio:', bio);
 
@@ -27,8 +29,9 @@
 
     const applePen = fruit + item;
 
-    console.log('I have a', item);
-    console.log('I have an', fruit);
+    console.log(`I have a ${item}`);
+    console.log(`I have an ${fruit}`);
+
     console.log(applePen);
   </script>
 </body>
