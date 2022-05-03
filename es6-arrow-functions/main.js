@@ -3,36 +3,36 @@ const $flashImage = document.querySelector('#flash-image');
 const $jokeForm = document.querySelector('#joke-form');
 
 const jokester = {
-  tellJoke: function (setup, punchline) {
+  tellJoke: (setup, punchline) => {
     $jokeForm.classList.add('d-none');
-    const $introStatement = this.renderJokePhrase('Hey Flash...');
-    this.appendJokePhrase($introStatement);
+    const $introStatement = jokester.renderJokePhrase('Hey Flash...');
+    jokester.appendJokePhrase($introStatement);
     setTimeout(function () {
-      const $jokeSetup = this.renderJokePhrase(setup);
-      this.appendJokePhrase($jokeSetup);
+      const $jokeSetup = jokester.renderJokePhrase(setup);
+      jokester.appendJokePhrase($jokeSetup);
       setTimeout(function () {
-        const $jokePunchline = this.renderJokePhrase(punchline);
-        this.appendJokePhrase($jokePunchline);
+        const $jokePunchline = jokester.renderJokePhrase(punchline);
+        jokester.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
   },
-  renderJokePhrase: function (phrase) {
+  renderJokePhrase: phrase => {
     const $phrase = document.createElement('h4');
     $phrase.textContent = phrase;
     $phrase.className = 'fade-in text-center';
     return $phrase;
   },
-  appendJokePhrase: function ($phrase) {
+  appendJokePhrase: $phrase => {
     $jokeContainer.append($phrase);
   }
 };
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
-  laugh: function () {
+  laugh: () => {
     setTimeout(function () {
-      $flashImage.setAttribute('src', this.laughingUrl);
+      $flashImage.setAttribute('src', flash.laughingUrl);
     }, 3000);
   }
 };
