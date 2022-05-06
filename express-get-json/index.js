@@ -23,15 +23,8 @@ const grades = {
   }
 };
 
-app.use('/api/grades', (req, res, next) => {
-  switch (req.method) {
-    case 'GET':
-      res.send(gradeArray(grades));
-      break;
-    default:
-      console.error(`unsupported request method ${req.method}`);
-      break;
-  }
+app.get('/api/grades', (req, res, next) => {
+  res.send(gradeArray(grades));
 });
 
 app.listen(PORT, () => {
