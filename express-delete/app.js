@@ -29,7 +29,7 @@ app.get('/api/grades', (req, res, next) => {
 
 app.delete('/api/grades/:id', (req, res, next) => {
   delete grades[req.params.id];
-  res.json(gradeArray(grades));
+  res.sendStatus(204);
 });
 
 app.listen(PORT, () => {
