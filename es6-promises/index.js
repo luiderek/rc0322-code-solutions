@@ -5,5 +5,5 @@ const chancePromise = takeAChance('Derek')
     console.log(value);
   })
   .catch(err => {
-    console.error(err);
+    console.log(err.message);
   });
