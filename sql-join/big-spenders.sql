@@ -7,4 +7,4 @@ FROM
   JOIN "customers" USING ("customerId")
 ORDER BY
   "paid" DESC
-LIMIT 10;
+LIMIT 11;
