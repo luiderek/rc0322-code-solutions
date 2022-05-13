@@ -1,11 +1,13 @@
 SELECT
-  "customers"."firstName",
-  "customers"."lastName",
-  SUM("payments"."amount") AS "totalpaid"
+  "genres"."name",
+  COUNT("genres"."name")
 FROM
-  "customers"
-  JOIN "payments" USING ("customerId")
+  "genres"
+  JOIN "filmGenre" USING ("genreId")
+  JOIN "castMembers" USING ("filmId")
+  JOIN "actors" USING ("actorId")
+where
+  "firstName" = 'Lisa' AND
+  "lastName" = 'Monroe'
 GROUP BY
-  "customerId"
-ORDER BY
-  "totalpaid" DESC
+  "genreId";
