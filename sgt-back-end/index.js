@@ -212,21 +212,24 @@ function inputChecks(req, res, options) {
   if (options.includes('name')) {
     if (!req.body.name) {
       errors.push('name must exist');
-    } else if (typeof req.body.name !== 'string') {
+    }
+    if (typeof req.body.name !== 'string') {
       errors.push('name must be a string');
     }
   }
   if (options.includes('course')) {
     if (!req.body.course) {
       errors.push('course must exist');
-    } else if (typeof req.body.course !== 'string') {
+    }
+    if (typeof req.body.course !== 'string') {
       errors.push('course must be a string');
     }
   }
   if (options.includes('score')) {
     if (!req.body.score) {
       errors.push('score must exist');
-    } else if (typeof req.body.score !== 'number') {
+    }
+    if (typeof req.body.score !== 'number') {
       errors.push('score must be a number');
     }
     if (req.body.score < 0 || req.body.score > 100) {
