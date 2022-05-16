@@ -11,3 +11,8 @@ const names = [
   'Janese',
   'Donna'
 ];
+
+const evenNumbers = numbers.filter(x => x % 2 === 0);
+const overFive = numbers.filter(x => x > 5);
+const startWithE = names.filter(x => x[0] === 'E');
+const haveD = names.filter(x => x.toLowerCase().includes('d'));
