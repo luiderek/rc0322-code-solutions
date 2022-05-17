@@ -1,18 +1,42 @@
 /* exported Student */
 
-function Student(firstName, lastName, subject) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.subject = subject;
+class Student {
+  constructor(firstName, lastName, subject) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.subject = subject;
+  }
+
+  getFullName() {
+    const { firstName, lastName } = this;
+    return `${firstName} ${lastName}`;
+  }
+
+  getIntroduction() {
+    const { subject } = this;
+    const fullName = this.getFullName();
+    return `Hello, my name is ${fullName} and I am studying ${subject}.`;
+  }
 }
 
-Student.prototype.getFullName = function () {
-  const { firstName, lastName } = this;
-  return `${firstName} ${lastName}`;
-};
+// personal takeaway from es5: ".__proto__" is useful.
 
-Student.prototype.getIntroduction = function () {
-  const { subject } = this;
-  const fullName = this.getFullName();
-  return `Hello, my name is ${fullName} and I am studying ${subject}.`;
-};
+// ES5 Equivalent
+// function Student(firstName, lastName, subject) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.subject = subject;
+// }
+
+// ES5, before.
+// Student.prototype.getFullName = function () {
+//   const { firstName, lastName } = this;
+//   return `${firstName} ${lastName}`;
+// };
+
+// ES5, before.
+// Student.prototype.getIntroduction = function () {
+//   const { subject } = this;
+//   const fullName = this.getFullName();
+//   return `Hello, my name is ${fullName} and I am studying ${subject}.`;
+// };
