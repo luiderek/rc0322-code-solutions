@@ -1,5 +1,4 @@
-function ExampleClass() {
-
+class ExampleClass {
 }
 
 const example = new ExampleClass();
