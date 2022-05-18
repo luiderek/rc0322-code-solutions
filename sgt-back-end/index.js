@@ -1,10 +1,13 @@
 const pg = require('pg');
 const express = require('express');
+const path = require('path');
+const publicPath = path.join(__dirname, 'public');
 
 const PORT = 3000;
 const app = express();
 const JSONparser = express.json();
 app.use(JSONparser);
+app.use(express.static(publicPath));
 
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
