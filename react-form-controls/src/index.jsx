@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-class RegristrationForm extends React.Component {
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+class RegistrationForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { username: '', password: '' };
@@ -25,22 +27,27 @@ class RegristrationForm extends React.Component {
 
   render() {
     return (
-      <form>
-        <input
-          type="text"
-          value={this.state.username}
-          onChange={this.handleUsernameChange}
-        />
-        <input
-          type="password"
-          value={this.state.password}
-          onChange={this.handlePasswordChange}
-        />
-        <button onClick={this.handleSubmit}>Sign Up</button>
+      <form onSubmit={this.handleSubmit}>
+        <label name="Username">
+          Username
+          <input
+            type="text"
+            value={this.state.username}
+            onChange={this.handleUsernameChange}
+          />
+        </label>
+        <label name="Password">
+          Password
+          <input
+            type="password"
+            value={this.state.password}
+            onChange={this.handlePasswordChange}
+          />
+        </label>
+        <button>Sign Up</button>
       </form>
     );
   }
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<RegristrationForm />);
+root.render(<RegistrationForm />);
