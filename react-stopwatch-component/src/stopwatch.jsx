@@ -17,8 +17,6 @@ export default class Stopwatch extends React.Component {
   timerStop() {
     clearInterval(this.timerID);
     this.setState({ timerActive: false });
-    // this.timerID = null;
-    // this.render();
   }
 
   tick() {
