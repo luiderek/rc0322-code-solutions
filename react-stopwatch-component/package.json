@@ -1,0 +1,24 @@
+{
+  "name": "react-stopwatch-component",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "webpack --watch --mode=development --devtool=source-map",
+    "build": "webpack --mode=development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "derek",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-transform-react-jsx": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}

@@ -1,0 +1,27 @@
+.timer {
+  display: grid;
+}
+
+.clock {
+  width: 130px;
+  height: 130px;
+  border: 6px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 225%;
+  font-family: cursive;
+  user-select: none;
+  margin-inline: auto;
+}
+
+.clock-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-solid {
+  font-size: 175%;
+  margin-top: 0.5rem;
+}
