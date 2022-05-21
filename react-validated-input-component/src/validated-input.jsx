@@ -13,44 +13,27 @@ export default class ValidatedInput extends React.Component {
   }
 
   handlePasswordChange(e) {
-    // console.log('pass:', e.target.value);
-    this.validateInputs(e.target.value);
     this.setState({ pass: e.target.value });
-  }
-
-  validateInputs(input) {
-    if (!input) {
-      this.setState({
-        errorMessage: 'A password is required.',
-        passValid: false
-      });
-    } else if (input.length < 8) {
-      this.setState({
-        errorMessage: 'Your password is too short.',
-        passValid: false
-      });
-    } else if (input === input.toLowerCase()) {
-      this.setState({
-        errorMessage: 'Password must contain one capital letter.',
-        passValid: false
-      });
-    } else if (!/\d/.test(input)) {
-      this.setState({
-        errorMessage: 'Password must contain at least one number.',
-        passValid: false
-      });
-    } else if (!/[`~!@#$%^&*()]/.test(input)) {
-      this.setState({
-        errorMessage: 'Password must contain at least one special character.',
-        passValid: false
-      });
-    } else {
-      this.setState({ errorMessage: '', passValid: true });
-    }
   }
 
   handleSubmit(e) {
     e.preventDefault();
+  }
+
+  validatePass(input) {
+    if (!input) {
+      return 'A password is required.';
+    } else if (input.length < 8) {
+      return 'Your password is too short.';
+    } else if (input === input.toLowerCase()) {
+      return 'Password must contain one capital letter.';
+    } else if (!/\d/.test(input)) {
+      return 'Password must contain at least one number.';
+    } else if (!/[`~!@#$%^&*()]/.test(input)) {
+      return 'Password must contain at least one special character.';
+    } else {
+      return '';
+    }
   }
 
   render() {
@@ -65,16 +48,18 @@ export default class ValidatedInput extends React.Component {
               value={this.state.password}
               onChange={this.handlePasswordChange}
             />
-            {this.state.passValid
+            {this.validatePass(this.state.pass) !== ''
               ? (
-              <i className="fa-solid fa-check"></i>
+              <i className="fa-solid fa-x"></i>
                 )
               : (
-              <i className="fa-solid fa-x"></i>
+              <i className="fa-solid fa-check"></i>
                 )}
           </span>
         </label>
-        <span className="val-input-error">{this.state.errorMessage}</span>
+        <span className="val-input-error">
+          {this.validatePass(this.state.pass)}
+        </span>
       </form>
     );
   }
