@@ -4,9 +4,7 @@ export default class ValidatedInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pass: '',
-      passValid: false,
-      errorMessage: 'A password is required.'
+      pass: ''
     };
     this.handlePasswordChange = this.handlePasswordChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
