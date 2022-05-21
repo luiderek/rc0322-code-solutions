@@ -1,0 +1,42 @@
+* {
+  font-family: cursive;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type="password"] {
+  margin-top: 0.2rem;
+  display: block;
+  border: 3px solid black;
+}
+
+.val-input-error {
+  font-size: 85%;
+  margin-top: 0.3rem;
+  color: rgb(200 23 23);
+}
+
+.val-input-entry {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+}
+
+i.fa-solid {
+  margin-left: 0.4rem;
+}
+
+i.fa-check {
+  color: green;
+}
+
+i.fa-x {
+  color: red;
+}
