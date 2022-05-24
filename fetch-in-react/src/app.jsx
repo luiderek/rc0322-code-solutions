@@ -18,10 +18,6 @@ class App extends React.Component {
       });
   }
 
-  setUsers(data) {
-    this.setState({ users: data });
-  }
-
   render() {
     return this.state.isLoading
       ? <p>Loading...</p>
