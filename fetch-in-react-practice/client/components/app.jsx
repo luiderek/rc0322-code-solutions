@@ -42,13 +42,7 @@ export default class App extends React.Component {
 
   toggleCompleted(todoId) {
     // finding the object where todoID matches the function argument
-    let todoIndex;
-    for (let i = 0; i < this.state.todos.length; i++) {
-      if (this.state.todos[i].todoId === todoId) {
-        todoIndex = i;
-        break;
-      }
-    }
+    const todoIndex = this.state.todos.findIndex(x => x.todoId === todoId);
     const selectedObject = this.state.todos[todoIndex];
     // Use fetch to send a PATCH request to `/api/todos/${todoId}
     fetch(`/api/todos/${selectedObject.todoId}`, {
@@ -59,7 +53,7 @@ export default class App extends React.Component {
     }).then(response => response.json())
       .then(data => {
         // creating a shallow copy of the todos array from state
-        const statecopy = this.state.todos;
+        const statecopy = [...this.state.todos];
         // replacing the old todo with the one received by the server
         statecopy.splice(todoIndex, 1, data);
         // updating client state
