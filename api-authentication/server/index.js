@@ -70,13 +70,13 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
       } else {
         // Otherwise, make a payload containing UserID and Username
         const payload = {
-          userId: 42,
+          userId: user.userId,
           username: username
         };
           // And sign it with TOKEN_SECRET
         const token = jwt.sign(payload, process.env.TOKEN_SECRET);
         // Send the client a 200 response containing the payload and the token.
-        res.status(201).json(token);
+        res.status(200).json(token);
       }
     }
   } catch (err) {
