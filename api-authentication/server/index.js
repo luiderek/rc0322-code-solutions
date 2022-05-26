@@ -82,25 +82,29 @@ app.post('/api/auth/sign-in', async (req, res, next) => {
   } catch (err) {
     return next(err);
   }
-  /**
-   * Query the database to find the "userId" and "hashedPassword" for the "username".
-   * Then, 😉
-   *    If no user is found,
-   *      throw a 401: 'invalid login' error.
-   *
-   *
-   *    If a user is found,
-   *      confirm that the password included in the request body matches the "hashedPassword" with `argon2.verify()`
-   *      Then, 😉
-   *        If the password does not match,
-   *          throw a 401: 'invalid login' error.
-   *        If the password does match,
-   *          Create a payload object containing the user's "userId" and "username".
-   *          Create a new signed token with `jwt.sign()`, using the payload and your TOKEN_SECRET
-   *          Send the client a 200 response containing the payload and the token.
-   *      Catch any error.
-   * Catch any error.
-   */
+
+  // Attempting the solution without async await.
+  // db.query(getUserIdHashPassFromUserSQL, [username])
+  //   .then(result => {
+  //     const [user] = result.rows;
+  //     if (!user) {
+  //       throw new ClientError(401, 'invalid login');
+  //     } else {
+  //       argon2
+  //         .verify(user.hashedPassword, password)
+  //         .then(isMatch => {
+  //           if (isMatch) {
+  //             const payload = { userId: user.userId, username: username };
+  //             const token = jwt.sign(payload, process.env.TOKEN_SECRET);
+  //             res.status(200).json(token);
+  //           } else {
+  //             throw new ClientError(401, 'invalid login');
+  //           }
+  //         })
+  //         .catch(err => next(err));
+  //     }
+  //   })
+  //   .catch(err => next(err));
 });
 
 app.use(errorMiddleware);
