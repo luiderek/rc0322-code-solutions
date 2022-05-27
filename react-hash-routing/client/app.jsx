@@ -19,6 +19,11 @@ export default class App extends React.Component {
      * Each time the window.location.hash changes, parse
      * it with the parseRoute() function and update state
      */
+    window.addEventListener('hashchange', () => {
+      this.setState({ route: parseRoute(window.location.hash) });
+
+    });
+
   }
 
   renderPage() {
