@@ -1,0 +1,22 @@
+PROLOGUE
+It was a dark and stormy night,
+The server is hosted in ./server/index.js, and ran with npm run dev
+Webpack + Babel transpiles multiple JSX files from /client into public/main.js
+Using the middleware of express.static, './public/' is served to client
+User connects to the server through the browser, sending a get request to index.html.
+The client runs main.js, which starts with the contents of (pre-build) index.js
+Index.jsx calls the ReactDOM.createRoot on "div#root" from index.html
+Index.jsx renders the App Component on the root div, (from ./public/app.jsx)
+The app constructor run, setting 3 state variables and this-binding 2 methods
+The app component when rendered() returns
+  components <Navbar /> and <PageContainer /> wrapped with a context provider
+  the context provider has a value prop with an object contextValue containing:
+    two values destructured from this.state, user and route
+    two methods destructured from this, handleSignIn(), handleSignOut()
+Inside <PageContainer />, depending on the value of route.path from state
+  It returns one of three components: <Home />, <Auth />, or <NotFound />
+
+CH 1 User can sign up.
+CH 2 User can sign in.
+CH 3 User can stay signed in.
+CH 4 User can sign out.
