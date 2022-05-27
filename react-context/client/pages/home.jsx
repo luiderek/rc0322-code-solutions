@@ -22,7 +22,7 @@ export default class Home extends React.Component {
     return (
       <div style={styles.gifContainer}>
         <iframe
-          src="https://giphy.com/embed/Ju7l5y9osyymQ"
+          src="https://giphy.com/embed/l1K9Dcy7ww0CW3JHq"
           width="100%"
           height="100%"
           frameBorder="0"
