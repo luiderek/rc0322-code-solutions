@@ -1,0 +1,73 @@
+------------------ PROLOGUE ------------------
+
+It was a dark and stormy night,
+The server is hosted in ./server/index.js
+Webpack + Babel transpiles multiple JSX files from /client into public/main.js
+Using the middleware of express.static, contents of ./public/ is served
+User connects to the server through a browser, get requesting index.html.
+From index.html, client runs main.js, which starts with index.js which:
+    calls the ReactDOM.createRoot on "div#root" from index.html
+    renders the App Component on the root div, (from ./public/app.jsx)
+The app constructor runs, setting 3 state variables and this-binding 2 methods
+The app component on render() returns:
+    components <Navbar /> and <PageContainer /> wrapped with a context provider
+    provider has a value prop with object contextValue containing:
+        two values destructured from this.state, user and route
+        two methods destructured from this, handleSignIn(), handleSignOut()
+Inside <PageContainer />, depending on the value of route.path from state
+    It returns one of three components: <Home />, <Auth />, or <NotFound />
+
+------------ CH 1 User can sign up. -----------
+
+App's constructor assigns parseRoute(window.location.hash) to state.route
+    parseRoute parses the hash into an object with properties path and param
+    path would be '', so <PageContainer />'s returnPage() returns <Home />
+    since state.user is initially null from the app constructor,
+        this.context.user is set to null, and so
+        redirect.jsx is called with the props to='sign-in'
+        which changes the url's hash, triggering App's hashchange eventlistener
+            this updates state.route, resulting in another render()
+        now that the route.path is 'sign-in', returnPage() returns <Auth />.
+<Auth /> renders <AuthForm /> with the props key, action, onSignIn
+
+<a> element containing alternatActionText in <AuthForm /> redirects the page
+    it toggles between the action/path 'sign-in' to 'sign-up' and vice versa
+
+User submits <AuthForm />, and onSubmit sends a POST request using fetch
+    this goes to /api/auth/sign-up, and it does back end stuff living in index.js.
+    this will insert (username, hashedPassword) into the postgreSQL backend
+    then it may reply with status 201 json object of [userId, username, createdAt]
+
+------------ CH 2 User can sign in. -----------
+
+User fills out the form from <AuthForm />, and on submit sends a fetch request
+    fetch request headers are POST, with a body of this.state, but JSONified.
+    Authform calls onSignIn prop, which was passed handleSignIn from <Auth />
+    it also updates window.location.hash to 'sign-in'
+
+handleSignIn destructures {user, token} from the result of a successful fetch,
+    stores the jwt token in local storage
+    updates the state of user, triggering another render()
+    (see 44) somehow trickles down to route.path via context globals
+        and is passed as the action prop of <AuthForm />
+        changing the buttons / behavior of AuthForm to onSignIn, if result has a user and a token.
+
+
+--------- CH 3 User can stay signed in. -------
+
+handleSignIn also stores a token in local storage.
+when the app component mounts, it checks localStorage for a token.
+if the token exists, the user is decoded from the token, otherwise user is null.
+if the token is there, and the user isn't null, when renderPage() loads <Home />
+    it will not redirect to the signin component
+    and display a gif.
+
+------------ CH 4 User can sign out. ----------
+
+handleSignOut removes the token from local storage, and sets state.user to null.
+this rerenders the page and acts like a fresh load of the page.
+
+------------------ EPILOGUE -------------------
+
+it's 12:35am, what am I even doing.
+code goes brrrrrrrrr
