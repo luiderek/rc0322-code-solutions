@@ -20,20 +20,20 @@ function uniqueLinear(words) {
 function uniqueQuadratic(words) {
   const unique = [];                // 1 * 1 = O(1)
   for (
-    let i = 0;                      // 1 * 1 = O(1)
+    let i = 0;                      // 1 * n = O(n)
     i < words.length;               // 2 * n = O(2n)
     i++                             // 2 * n = O(2n)
   ) {
     const word = words[i];          // 1 * n = O(n)
     let isUnique = true;            // 1 * n = O(n)
     for (
-      let c = 0;                    // 1 * 1 = O(1)
-      c < i;                        // 1 * n2 = O(n2)
-      c++                           // 2 * n2 = O(n2)
+      let c = 0;                    // 1 * n^2 = O(n^2)
+      c < i;                        // 1 * n^2 = O(n^2)
+      c++                           // 2 * n^2 = O(n^2)
     ) {
-      const comparing = words[c];   // 1 * n2 = O(n2)
-      if (comparing === word) {     // 2 * n2 = O(2n2)
-        isUnique = false;           // 1 * n2 = O(n2)
+      const comparing = words[c];   // 1 * n^2 = O(n^2)
+      if (comparing === word) {     // 2 * n^2 = O(2n^2)
+        isUnique = false;           // 1 * n^2 = O(n2)
       }
     }
     if (isUnique) {                 // 2 * n = O(2n)
